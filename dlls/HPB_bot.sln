@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HPB_bot", "HPB_bot.vcxproj", "{0D9BEB36-8C1B-443E-9672-E2E894A00935}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		MetaMod Debug|x86 = MetaMod Debug|x86
+		MetaMod Release|x86 = MetaMod Release|x86
+		Release|x86 = Release|x86
+		TFC Debug metamod|x86 = TFC Debug metamod|x86
+		TFC Debug|x86 = TFC Debug|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D9BEB36-8C1B-443E-9672-E2E894A00935}.Debug|x86.ActiveCfg = Debug|Win32
+		{0D9BEB36-8C1B-443E-9672-E2E894A00935}.Debug|x86.Build.0 = Debug|Win32
+		{0D9BEB36-8C1B-443E-9672-E2E894A00935}.MetaMod Debug|x86.ActiveCfg = MetaMod Debug|Win32
+		{0D9BEB36-8C1B-443E-9672-E2E894A00935}.MetaMod Debug|x86.Build.0 = MetaMod Debug|Win32
+		{0D9BEB36-8C1B-443E-9672-E2E894A00935}.MetaMod Release|x86.ActiveCfg = MetaMod Release|Win32
+		{0D9BEB36-8C1B-443E-9672-E2E894A00935}.MetaMod Release|x86.Build.0 = MetaMod Release|Win32
+		{0D9BEB36-8C1B-443E-9672-E2E894A00935}.Release|x86.ActiveCfg = Release|Win32
+		{0D9BEB36-8C1B-443E-9672-E2E894A00935}.Release|x86.Build.0 = Release|Win32
+		{0D9BEB36-8C1B-443E-9672-E2E894A00935}.TFC Debug metamod|x86.ActiveCfg = TFC Debug metamod|Win32
+		{0D9BEB36-8C1B-443E-9672-E2E894A00935}.TFC Debug metamod|x86.Build.0 = TFC Debug metamod|Win32
+		{0D9BEB36-8C1B-443E-9672-E2E894A00935}.TFC Debug|x86.ActiveCfg = TFC Debug|Win32
+		{0D9BEB36-8C1B-443E-9672-E2E894A00935}.TFC Debug|x86.Build.0 = TFC Debug|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
