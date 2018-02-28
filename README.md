@@ -285,14 +285,7 @@ to the file.
 Supported Mods
 --------------
 
-BattleGrounds
-Natural Selection 2.01/3.0
 Svencoop 5.x
-Deathmatch Classic
-HL Bumpercars 1.5 [and above]
-Rocket crowbar 2
-HL deathmatch
-Opposing Force (Experimental)
 
 =--------=
 2. Playing
