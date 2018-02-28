@@ -1083,6 +1083,7 @@ int WaypointFindPath(PATH **pPath, int *path_index, int waypoint_index, int team
    {
       while (*path_index < MAX_PATH_INDEX)
       {
+		 //Bug related to Sven v5.x? [APG]RoboCop[CL]
          if ((*pPath)->index[*path_index] != -1)  // found a path?
          {
             // save the return value

@@ -1508,6 +1508,8 @@ void CWaypointCommand :: showHelp ( edict_t *pEntity )
 	BotMessage(pEntity,0,"Waypoints are files stored in the rcbot/waypoints/%s folder",gBotGlobals.m_szModFolder);
 	BotMessage(pEntity,0,"\"waypoint on\" (displays waypoints)");
 	BotMessage(pEntity,0,"\"waypoint off\" (stops displaying waypoints)");
+	BotMessage(pEntity,0,"\"waypoint add\" (adds waypoint at your location)");
+	BotMessage(pEntity,0,"\"waypoint remove\" (removes waypoint at your location)");
 	BotMessage(pEntity,0,"\"waypoint load\" (loads waypoints for current map)");
 	BotMessage(pEntity,0,"\"waypoint save\" (saves waypoints to disk for future use)");
 }

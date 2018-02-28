@@ -1,19 +1,19 @@
 # rcbot1
-RCbot created by Cheeseh | This is a enhancement build for Sven Co-op v5.x
+RCbot created by Cheeseh | This is a enhancement build only for Sven Co-op v5.x
 
 RCBot versions
 --------------
 
-V 1.443_beta2
+V 1.443_beta3
 =---------=
 
 added: support for Sven Co-op v5 for both Win32 and Linux builds
-added: support for Opposing Force DeathMatch and CTF
 added: waypoint console info for adding and delete a single waypoint
 added: support for Metamod 1.19 or higher
 added: support for new Sven Co-op v5 weapons like the M16, Deagle, SporeGun and ShockRoach 
+changed: bot_navigate.cpp line 471
 changed: RCBot compiled with HLSDK 2.3-p4 and Metamod SDK v1.21
-changed: all builds optimised for Pentium 4 SSE2 or higher processers
+changed: all builds optimised for Pentium 4 SSE2 or higher processors
 
 V 1.3
 =---------=

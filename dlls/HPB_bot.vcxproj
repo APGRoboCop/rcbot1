@@ -315,7 +315,7 @@
       <ProgramDataBaseFileName>.\HPB_bot___Win32_MetaMod_Debug/</ProgramDataBaseFileName>
       <BrowseInformation>true</BrowseInformation>
       <BrowseInformationFile>.\HPB_bot___Win32_MetaMod_Debug/</BrowseInformationFile>
-      <WarningLevel>Level1</WarningLevel>
+      <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
@@ -423,7 +423,7 @@
       <ObjectFileName>.\Debug/</ObjectFileName>
       <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
       <BrowseInformation>true</BrowseInformation>
-      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
     </ClCompile>
@@ -451,6 +451,7 @@
     <ClCompile Include="bits.cpp" />
     <ClCompile Include="bot.cpp" />
     <ClCompile Include="bot_client.cpp" />
+    <ClCompile Include="bot_combat.cpp" />
     <ClCompile Include="bot_commands.cpp" />
     <ClCompile Include="bot_ga.cpp" />
     <ClCompile Include="bot_menu.cpp" />

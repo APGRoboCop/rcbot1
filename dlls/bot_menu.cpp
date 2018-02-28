@@ -138,7 +138,7 @@ void SetupMenus ( void )
 	else if ( gBotGlobals.IsMod(MOD_TFC) )
 		gBotGlobals.m_Menus[BOT_MENU_WAYPOINT_GIVE_FLAGS4].AddMenuItem(1,"Detpack (Also add \"Opens Later\" point at other side)",BotMenu_Func_EndLevel_Waypoint);
 	else
-		gBotGlobals.m_Menus[BOT_MENU_WAYPOINT_GIVE_FLAGS4].AddMenuItem(1,"End Of Level/Objective",BotMenu_Func_EndLevel_Waypoint);
+		gBotGlobals.m_Menus[BOT_MENU_WAYPOINT_GIVE_FLAGS4].AddMenuItem(1,"Capture Point/Objective",BotMenu_Func_EndLevel_Waypoint);
 	
 
 	gBotGlobals.m_Menus[BOT_MENU_WAYPOINT_GIVE_FLAGS4].AddMenuItem(2,"Stay Close To",BotMenu_Func_StayClose_Waypoint);
@@ -169,7 +169,7 @@ void SetupMenus ( void )
 		else if ( gBotGlobals.IsMod(MOD_SVENCOOP) )
 			gBotGlobals.m_Menus[BOT_MENU_WAYPOINT_GIVE_FLAGS6].AddMenuItem(1,"Throw Grenade",Bot_Menu_GrenThrow_Waypoint);
 		else
-			gBotGlobals.m_Menus[BOT_MENU_WAYPOINT_GIVE_FLAGS6].AddMenuItem(1,"Important Waypoint",Bot_Menu_Important_Waypoint);	
+			gBotGlobals.m_Menus[BOT_MENU_WAYPOINT_GIVE_FLAGS6].AddMenuItem(1,"CTF Flag/Important" ,Bot_Menu_Important_Waypoint);	
 		
 		gBotGlobals.m_Menus[BOT_MENU_WAYPOINT_GIVE_FLAGS6].AddMenuItem(2,"Pushable Point",BotMenu_Func_Pushable_Waypoint);
 		gBotGlobals.m_Menus[BOT_MENU_WAYPOINT_GIVE_FLAGS6].AddMenuItem(3,"Scientist Point",BotMenu_Func_Sci_Waypoint);

@@ -72,6 +72,8 @@ extern int debug_engine;
 
 extern FILE *fpMapConfig;
 static FILE *fp;
+
+//Fix required for RCBot 1.443? [APG]RoboCop[CL]
 /*
 void ReadRCBotFolder ( void )
 {

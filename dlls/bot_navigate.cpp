@@ -468,8 +468,8 @@ int BotNavigate_AStarAlgo ( CBot *pBot, int iFrom, int iTo, BOOL bContinue )
 						pentArea = (CBaseEntity*)GET_PRIVATE(tr.pHit);
 						pentActivator = (CBaseEntity*)GET_PRIVATE(pBot->m_pEdict);
 						
-						if ( pentArea && pentActivator && !pentArea->IsTriggered(pentActivator) )
-							continue; // it can't be opened yet..
+						//if ( pentArea && pentActivator && !pentArea->IsTriggered(pentActivator) )
+						//	continue; // it can't be opened yet..  - Not compatible with Sven Coop v5? [APG]RoboCop[CL]
 						
 						// get master value
 						iMasterVal = gBotGlobals.m_Masters.EntityCanFire(tr.pHit,pBot->m_pEdict);

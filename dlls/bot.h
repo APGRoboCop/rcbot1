@@ -6320,12 +6320,12 @@ public:
 		m_Mods.AddMod("rc2","rc2",MOD_RC2);
 		m_Mods.AddMod("RockCrowbar","rc",MOD_RC);
 		m_Mods.AddMod("svencoop","server",MOD_SVENCOOP); // Fix for SC 5.X? [APG]RoboCop[CL]
-		m_Mods.AddMod("svencoop","hl",MOD_SVENCOOP); 
 		m_Mods.AddMod("valve","hl",MOD_HL_DM);
 		m_Mods.AddMod("hlrally","hlrally",MOD_HL_RALLY);
 		m_Mods.AddMod("cstrike","mp",MOD_COUNTERSTRIKE);
 		m_Mods.AddMod("tfc","tfc",MOD_TFC);
-		m_Mods.AddMod("rspecies","hl",MOD_RS); // rival species meh..
+		m_Mods.AddMod("rspecies","hl",MOD_RS);// rival species meh..
+		//m_Mods.AddMod("gearbox","opfor",MOD_GEARBOX);
 #else
 		// LINUX
 		// Add mod folders and their name before the _i386 postfix of the so files. 
@@ -6342,13 +6342,12 @@ public:
 		m_Mods.AddMod("rc2","rc2",MOD_RC2);
 		m_Mods.AddMod("RockCrowbar","rc",MOD_RC);
 		m_Mods.AddMod("svencoop","server",MOD_SVENCOOP); // Fix for SC 5.X? [APG]RoboCop[CL]
-		m_Mods.AddMod("svencoop","hl",MOD_SVENCOOP); 
 		m_Mods.AddMod("valve","hl",MOD_HL_DM);
 		m_Mods.AddMod("hlrally","hlr",MOD_HL_RALLY);
 		m_Mods.AddMod("cstrike","mp",MOD_COUNTERSTRIKE);
 		m_Mods.AddMod("tfc","tfc",MOD_TFC);
 		m_Mods.AddMod("rspecies","hl",MOD_RS);
-
+		//m_Mods.AddMod("gearbox","opfor",MOD_GEARBOX);
 #endif	
 		// same for linux & windows
 		m_Mods.AddMod("bg","bg",MOD_BG);

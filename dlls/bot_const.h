@@ -1070,7 +1070,7 @@ enum
 	MOD_TFC = 12,		// team fortress classic (not started yet..)
 	MOD_HL_DM = 13,		// half-life deathmatch
 	MOD_HL_RALLY = 14,   // half-life rally (game crashes when adding a bot!!)
-	MOD_RS = 15 // rival species meh...
+	MOD_RS = 15, // rival species meh...
 };
 
 #define VGUI_MENU_NONE 0

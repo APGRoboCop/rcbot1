@@ -101,6 +101,9 @@
     <ClCompile Include="som.cpp">
       <Filter>Source Files\nn</Filter>
     </ClCompile>
+    <ClCompile Include="bot_combat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bot_ga.h">
