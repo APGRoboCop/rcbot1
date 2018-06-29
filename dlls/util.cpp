@@ -153,25 +153,20 @@ BOOL UTIL_MonsterHatesPlayer ( edict_t *pEntity, edict_t *pPlayer )
 {
 	if ( !gBotGlobals.IsMod(MOD_SVENCOOP) )
 		return FALSE;
-
 	CBaseMonster *pEnt = (CBaseMonster*)((CBaseEntity*)GET_PRIVATE(pEntity));
 	CBaseEntity *pPlayerEnt = (CBaseEntity*)GET_PRIVATE(pPlayer);
-
 	if ( pEnt )
 	{
 		if ( pPlayerEnt )
 		{
 			// test to see what rel is
 			//int rel = pEnt->IRelationship(pPlayerEnt);
-
 			// rel was some large number, 20000 odd, should only be like -2 to 3 or something?
 			//return (rel == R_HT);
-
 			// afMemory was always 0.. :/
      		return (( pEnt->m_afMemory & bits_MEMORY_PROVOKED ) == bits_MEMORY_PROVOKED); //This monster hates the player
 		}
 	}
-
 	return FALSE;
 }
 */
@@ -194,99 +189,73 @@ BOOL UTIL_EntityIsHive ( edict_t *pEdict )
 typedef struct
 {
 	char				label[32];	// sequence label
-
 	float				fps;		// frames per second	
 	int					flags;		// looping/non-looping flags
-
 	int					activity;
 	int					actweight;
-
 	int					numevents;
 	int					eventindex;
-
 	int					numframes;	// number of frames per sequence
-
 	int					numpivots;	// number of foot pivots
 	int					pivotindex;
-
 	int					motiontype;	
 	int					motionbone;
 	vec3_t				linearmovement;
 	int					automoveposindex;
 	int					automoveangleindex;
-
 	vec3_t				bbmin;		// per sequence bounding box
 	vec3_t				bbmax;		
-
 	int					numblends;
 	int					animindex;		// mstudioanim_t pointer relative to start of sequence group data
 										// [blend][bone][X, Y, Z, XR, YR, ZR]
-
 	int					blendtype[2];	// X, Y, Z, XR, YR, ZR
 	float				blendstart[2];	// starting value
 	float				blendend[2];	// ending value
 	int					blendparent;
-
 	int					seqgroup;		// sequence group for demand loading
-
 	int					entrynode;		// transition node at entry
 	int					exitnode;		// transition node at exit
 	int					nodeflags;		// transition rules
 	
 	int					nextseq;		// auto advancing sequences
 } mstudioseqdesc_t;
-
 typedef struct 
 {
 	int					id;
 	int					version;
-
 	char				name[64];
 	int					length;
-
 	vec3_t				eyeposition;	// ideal eye position
 	vec3_t				min;			// ideal movement hull size
 	vec3_t				max;			
-
 	vec3_t				bbmin;			// clipping bounding box
 	vec3_t				bbmax;		
-
 	int					flags;
-
 	int					numbones;			// bones
 	int					boneindex;
-
 	int					numbonecontrollers;		// bone controllers
 	int					bonecontrollerindex;
-
 	int					numhitboxes;			// complex bounding boxes
 	int					hitboxindex;			
 	
 	int					numseq;				// animation sequences
 	int					seqindex;
-
 	int					numseqgroups;		// demand loaded sequences
 	int					seqgroupindex;
-
 	int					numtextures;		// raw textures
 	int					textureindex;
 	int					texturedataindex;
-
 	int					numskinref;			// replaceable textures
 	int					numskinfamilies;
 	int					skinindex;
-
 	int					numbodyparts;		
 	int					bodypartindex;
-
 	int					numattachments;		// queryable attachable points
 	int					attachmentindex;
-
 	int					soundtable;
 	int					soundindex;
 	int					soundgroups;
 	int					soundgroupindex;
-
 	int					numtransitions;		// animation node to animation node transition graph
 	int					transitionindex;
 } studiohdr_t;
@@ -451,7 +420,6 @@ int LookupActivity( void *pmodel, entvars_t *pev, int activity )
 { 
 	if( !pmodel )
 		return 0;
-
 	studiohdr_t *pstudiohdr; 
 	
 	pstudiohdr = (studiohdr_t *)pmodel; 
@@ -464,7 +432,6 @@ int LookupActivity( void *pmodel, entvars_t *pev, int activity )
 	
 	if( !pseqdesc )
 		return 0;
-
 	int weighttotal = 0; 
 	int seq = -1; 
 	for (int i = 0; i < pstudiohdr->numseq; i++) 
@@ -686,7 +653,6 @@ BOOL UTIL_IsFacingEntity(entvars_t *pev, entvars_t *pevEntity)
 	return ((vDst <= pevEntity->absmax) && (vDst >= pevEntity->absmin));
 }
 	/*
-
 float UTIL_PitchAngleBetweenOrigin(entvars_t *pev,Vector vOrigin)
 {
 // UTIL_IsFacingEntity(entvars_t *pev, entvars_t *pevEntity)
@@ -695,21 +661,18 @@ float UTIL_PitchAngleBetweenOrigin(entvars_t *pev,Vector vOrigin)
 	Vector vMaxAngles;
 	Vector vMinAngles;
 	Vector vPevOrigin;
-
 	vPevOrigin = pev->origin + pev->view_ofs;
 	vMaxAngles = UTIL_VecToAngles(pev*/
 	/*
 	float fAngle;
 	Vector vBotAngles = pev->v_angle;
 	Vector vAngles;
-
 	UTIL_MakeVectors(vBotAngles);
 	
 	vAngles = vOrigin - pev->origin;
 	vAngles = UTIL_VecToAngles(vAngles);
 	
 	fAngle = -vBotAngles.x - (vAngles.x*3);
-
 	UTIL_FixFloatAngle(&fAngle);
 */
 //	return 1;
@@ -1578,7 +1541,6 @@ void ExplosionCreate( const Vector &center, const Vector &angles, edict_t *pOwne
 	{
 		KeyValueData	kvd;
 		char			buf[128];
-
 		edict_t *pExplosion = CREATE_NAMED_ENTITY(MAKE_STRING("env_explosion"));
 		sprintf( buf, "%3d", magnitude );
 		kvd.szKeyName = "iMagnitude";
@@ -1591,7 +1553,6 @@ void ExplosionCreate( const Vector &center, const Vector &angles, edict_t *pOwne
 		pExplosion->v.origin = center;
 		pExplosion->v.angles = pExplosion->v.v_angle = angles;
 		pExplosion->v.owner = pOwner;
-
 		DispatchSpawn(pExplosion);//->Spawn();
 		DispatchUse(pExplosion,pOwner);//->Use( (CBaseEntity*)GET_PRIVATE(pOwner), (CBaseEntity*)GET_PRIVATE(pOwner), USE_TOGGLE, 0 );
 	}
@@ -1600,7 +1561,6 @@ void ExplosionCreate( const Vector &center, const Vector &angles, edict_t *pOwne
 		
 		KeyValueData	kvd;
 		char			buf[128];
-
 		CBaseEntity *pExplosion = CreateEnt( "env_explosion", center, angles, pOwner );
 		sprintf( buf, "%3d", magnitude );
 		kvd.szKeyName = "iMagnitude";
@@ -2237,7 +2197,7 @@ void UTIL_BotToolTip ( edict_t *pEntity, eLanguage iLang, eToolTip iTooltip )
 	{ 
 		//---------------------------------------------------------------------------------------------------------------------<MAX
 		{"Welcome %n\nUse the command \"rcbot addbot\" to add a bot\nor use the bot menu (\"rcbot bot_menu\")",
-		 "Welcome %n\nServer running RCBot\n(http://rcbot.bots-united.com)",
+		 "Welcome %n\nServer visit us at \nhttp://apg-clan.org",
 		 "You can use the squad menu\n(\"rcbot squad_menu\" command) to edit bot squads\ne.g. formation and mode",
 		 "You can gain access to rcbot commands if you have\na password on the server\nuse \"rcbot set_pass <password>\"",
 		 "CPU Usage of the bot can be decreased by changing some\ncommands like: \"rcbot config max_vision_revs\"",
