@@ -54,7 +54,7 @@
 #include "meta_api.h"
 #endif
 #include "cbase.h" // Need CBASE for classify()
-//#include "player.h"
+//#include "player.h" // Not required for SC v5.X? [APG]RoboCop[CL]
 #include "bot_const.h"
 #include "bot.h"
 #include "waypoint.h"
@@ -1235,7 +1235,7 @@ void CBot :: FreeLocalMemory ( void )
 	
 	m_Profile.m_Rep.Destroy();
 	
-	//while ( !sOpenList.empty() )
+	//while ( !sOpenList.empty() ) //Fix for sOpenList.Destroy while loops? [APG]RoboCop[CL]
 	//	sOpenList.pop();
 	sOpenList.destroy();
 	//sOpenList.Destroy();
@@ -1292,9 +1292,10 @@ void CBot :: Init ( void )
 
 	//m_WptObjectiveTask = CBotTask(BOT_TASK_NONE);
 
-	//while ( !sOpenList.empty() )
+	//while ( !sOpenList.empty() ) //Fix for sOpenList.Destroy while loops? [APG]RoboCop[CL]
 	//	sOpenList.pop();
 	sOpenList.destroy();
+	//sOpenList.Destroy();
 
 	//sOpenList.Init();
 
@@ -1620,7 +1621,7 @@ void CBot :: SpawnInit ( BOOL bInit )
 		//m_stBotVisibles.Destroy();  // free the list of visible entities
 	//	m_stBotVisibles.Destroy();
 
-		//while ( !sOpenList.empty() )
+		//while ( !sOpenList.empty() ) //Fix for sOpenList.Destroy while loops? [APG]RoboCop[CL]
 		//	sOpenList.pop();
 		sOpenList.destroy();
 		//sOpenList.Destroy();
@@ -9633,7 +9634,7 @@ BOOL CBot :: IsEnemy ( edict_t *pEntity )
 			
 			if ( pEnemypev->flags & FL_MONSTER )
 			{
-				
+				//Fix for SC v5.X? [APG]RoboCop[CL]
 				CBaseEntity *pEnt =  CBaseEntity::Instance(pEnemypev);// (CBaseEntity*)GET_PRIVATE(pEntity);
 				
 				if ( !pEnt->m_fPlayerAlly )
@@ -9688,8 +9689,6 @@ BOOL CBot :: IsEnemy ( edict_t *pEntity )
 						
 					return TRUE;
 				}
-
-
 
 				return FALSE;
 			
@@ -11221,7 +11220,7 @@ BOOL BotFunc_BreakableIsEnemy ( edict_t *pBreakable, edict_t *pEdict )
 	if ( !(pEnemypev->flags & FL_WORLDBRUSH) && !(pEnemypev->spawnflags & SF_BREAK_TRIGGER_ONLY) )
 	{
 		//return ( !(pEnemypev->effects & EF_NODRAW) || (pEnemypev->target && *STRING(pEnemypev->target)) ) ;
-		
+		//Fix for SC v5.X? [APG]RoboCop[CL]
 		Vector *vSize = &pEnemypev->size;
 		Vector *vMySize = &pEdict->v.size;
 		

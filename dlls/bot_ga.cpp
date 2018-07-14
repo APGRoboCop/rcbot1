@@ -103,6 +103,7 @@ void CBotGAValues :: mutate ()
 	}
 }
 
+//CBotGAValues :: get (int) () - Appears to be unstable [APG]RoboCop[CL]
 float CBotGAValues :: get ( int iIndex )
 {
 	return m_theValues[iIndex];

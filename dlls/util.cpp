@@ -2197,7 +2197,7 @@ void UTIL_BotToolTip ( edict_t *pEntity, eLanguage iLang, eToolTip iTooltip )
 	{ 
 		//---------------------------------------------------------------------------------------------------------------------<MAX
 		{"Welcome %n\nUse the command \"rcbot addbot\" to add a bot\nor use the bot menu (\"rcbot bot_menu\")",
-		 "Welcome %n\nServer visit us at \nhttp://apg-clan.org",
+		 "Welcome %n to [APG] Server\nPlease visit us at https://apg-clan.org",
 		 "You can use the squad menu\n(\"rcbot squad_menu\" command) to edit bot squads\ne.g. formation and mode",
 		 "You can gain access to rcbot commands if you have\na password on the server\nuse \"rcbot set_pass <password>\"",
 		 "CPU Usage of the bot can be decreased by changing some\ncommands like: \"rcbot config max_vision_revs\"",

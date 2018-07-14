@@ -76,6 +76,7 @@ CPerceptron :: CPerceptron (unsigned int iInputs,ITransfer *transferFunction, fl
 	m_output = 0;
 }
 
+//Unstable with CBotGAValues::get(int)() ? [APG]RoboCop[CL]
 void CPerceptron :: setWeights ( CBotGAValues *vals, int iFrom, int iNum )
 {
 	m_weights.clear();

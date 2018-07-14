@@ -3468,7 +3468,7 @@ public:
 	/////////////////////////////////////////
 	// Navigation
 
-	// open list of waypoints for A*
+	// open list of waypoints for A* //Fix for sOpenList.Destroy while loops? [APG]RoboCop[CL]
 	//priority_queue<AStarNode*,vector<AStarNode*>,CompareAStarNode> sOpenList;//dataStack<int>
 	AStarOpenList sOpenList;
 	// A* nodes

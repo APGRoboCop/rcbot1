@@ -293,11 +293,7 @@ void InitMessage ( const char *message );
 					
 					switch ( RANDOM_LONG(0,4) )
 					{
-						//For [APG] Servers Only
 					case 0:
-						UTIL_PlaySound(m_pPlayer,"vox/will complex(e40), to eight(e40), press(e10) e, g service(e70) sector(s75)");
-						break;
-					/*case 0:
 						UTIL_PlaySound(m_pPlayer,"scientist/hello");
 						break;
 					case 1:
@@ -311,7 +307,7 @@ void InitMessage ( const char *message );
 						break;
 					case 4:
 						UTIL_PlaySound(m_pPlayer,"scientist/hellothere");
-						break;*/
+						break;
 					}
 				}
 			}

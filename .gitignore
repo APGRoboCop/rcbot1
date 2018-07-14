@@ -286,3 +286,13 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+*.o
+dlls/debug.linux/metamod.so
+dlls/rcbot_mm_dbg.so
+dlls/rcbot_mm.so
+*.tlog
+dlls/HPB_bot___Win32_MetaMod_Release/HPB_bot.map
+dlls/HPB_bot___Win32_MetaMod_Release/HPB_bot.lib
+dlls/HPB_bot___Win32_MetaMod_Release/HPB_bot.exp
+dlls/HPB_bot___Win32_MetaMod_Release/HPB_bot.dll
+dlls/HPB_bot___Win32_MetaMod_Release/HPB_bot.bsc
