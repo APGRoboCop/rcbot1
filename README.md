@@ -1,4 +1,7 @@
 # rcbot1
+Note: Try out RCBot's AngelScript version as Sven Co-op no longer supports Metamod based addons anymore
+https://github.com/rcbotCheeseh/RCBotSven5
+
 RCbot created by Cheeseh | This is a enhancement build only for Sven Co-op v5.x
 
 RCBot versions
